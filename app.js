@@ -19,6 +19,7 @@ const PORT = process.env.PORT;
 
 // middleware;
 app.get("/home", Authenticate, (req, res) => {
+  res.setHeader("Access-Control-Allow-Credentials","true");
   res.send(req.rootUser);
 });
 
